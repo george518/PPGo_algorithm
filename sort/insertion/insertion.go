@@ -44,3 +44,26 @@ func Sort2(arr []int) []int {
 	}
 	return arr
 }
+
+//归并优化使用,排序数组部分
+func SortApart(arr *[]int, l, r int64) {
+	len := r - l + 1
+	if len < 2 {
+		return
+	}
+	for i := l; i < len; i++ {
+		e := (*arr)[i]
+		var ej int64
+
+		for j := i; j > 0; j-- {
+			if (*arr)[j-1] > e {
+				(*arr)[j] = (*arr)[j-1]
+			} else {
+				ej = j
+				break
+			}
+		}
+		(*arr)[ej] = e
+	}
+	return
+}
