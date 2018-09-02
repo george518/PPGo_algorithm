@@ -7,18 +7,19 @@
 *************************************************************/
 package bubble
 
-func Sort(s []int) []int {
-	len := len(s)
+//冒泡排序
+func Sort(arr []int) []int {
+	len := len(arr)
 	if len < 2 {
-		return s
+		return arr
 	}
 	for i := 1; i < len; i++ {
 		for j := 0; j < len-i; j++ {
-			if s[j] > s[j+1] {
-				s[j+1], s[j] = s[j], s[j+1]
+			if arr[j] > arr[j+1] {
+				arr[j+1], arr[j] = arr[j], arr[j+1]
 			}
 			//fmt.Println(s)
 		}
 	}
-	return s
+	return arr
 }
