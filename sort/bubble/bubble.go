@@ -9,6 +9,9 @@ package bubble
 
 func Sort(s []int) []int {
 	len := len(s)
+	if len < 2 {
+		return s
+	}
 	for i := 1; i < len; i++ {
 		for j := 0; j < len-i; j++ {
 			if s[j] > s[j+1] {

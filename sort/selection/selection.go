@@ -7,6 +7,7 @@
 *************************************************************/
 package selection
 
+//每次查找剩余元素的最小值，交换位置
 func Sort(arr []int) []int {
 	len := len(arr)
 	if len <= 1 {
@@ -14,11 +15,14 @@ func Sort(arr []int) []int {
 	}
 
 	for i := 0; i < len; i++ {
+		var minIndex = i
 		for j := i + 1; j < len; j++ {
-			if arr[i] > arr[j] {
-				arr[i], arr[j] = arr[j], arr[i]
+			if arr[minIndex] > arr[j] {
+				minIndex = j
 			}
 		}
+		arr[i], arr[minIndex] = arr[minIndex], arr[i]
+
 	}
 
 	return arr
