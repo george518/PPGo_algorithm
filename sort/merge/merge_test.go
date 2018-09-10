@@ -10,6 +10,8 @@ package merge
 import (
 	"testing"
 
+	"fmt"
+
 	"github.com/george518/PPGo_algorithm/common"
 )
 
@@ -17,6 +19,7 @@ import (
 func TestSort(t *testing.T) {
 	arr := common.RandArray(10, 1000, 9999)
 	sortArr := Sort(arr)
+	fmt.Println(sortArr)
 	if !common.CheckArray(&sortArr) {
 		t.Error("failure")
 	} else {
