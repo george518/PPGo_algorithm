@@ -13,7 +13,6 @@ func Sort(arr []int) []int {
 	if len <= 1 {
 		return arr
 	}
-
 	for i := 0; i < len; i++ {
 		var minIndex = i
 		for j := i + 1; j < len; j++ {
@@ -22,8 +21,6 @@ func Sort(arr []int) []int {
 			}
 		}
 		arr[i], arr[minIndex] = arr[minIndex], arr[i]
-
 	}
-
 	return arr
 }

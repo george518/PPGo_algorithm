@@ -27,7 +27,6 @@ func merge(arr *[]int, l, mid, r int64) {
 
 	//迭代，从l到r;
 	for k := l; k <= r; k++ {
-
 		//i-l表示左半部分没有处理过的下标
 		//j-l表示有半部分没有处理过的下标
 		switch {
@@ -48,7 +47,6 @@ func merge(arr *[]int, l, mid, r int64) {
 			j++
 		}
 	}
-
 }
 
 func sort(arr *[]int, l, r int64) {
@@ -77,7 +75,6 @@ func sort(arr *[]int, l, r int64) {
 	if (*arr)[mid] > (*arr)[mid+1] {
 		merge(arr, l, mid, r)
 	}
-
 }
 
 func Sort(arr []int) []int {
