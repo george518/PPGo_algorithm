@@ -5,7 +5,7 @@
 ** @Last Modified by:   haodaquan
 ** @Last Modified time: 2018-09-18 23:19
 *************************************************************/
-package heap
+package index_heap
 
 import (
 	"fmt"
@@ -13,29 +13,29 @@ import (
 )
 
 func TestMaxHeap_Insert(t *testing.T) {
-	var mh MaxHeap
+	var mh IndexMaxHeap
 	mh.init(100)
-	mh.Insert(10)
-	mh.Insert(19)
-	mh.Insert(11)
-	mh.Insert(17)
-	mh.Insert(13)
-	mh.Insert(14)
+	mh.Insert(2)
+	mh.Insert(3)
 	mh.Insert(1)
-	mh.Insert(15)
-	mh.Insert(16)
-	mh.Insert(18)
-	mh.Insert(122)
-	mh.Insert(133)
-	mh.Insert(21)
-	mh.Insert(121)
+	mh.Insert(9)
+	mh.Insert(4)
+	mh.Insert(8)
+	mh.Insert(7)
+	mh.Insert(5)
+	mh.Insert(6)
 
-	fmt.Println(mh)
-	mh.PrintHeap()
+	index := make([]int, 0)
+	for i := 0; i < mh.Len; i++ {
+		index = append(index, i)
+	}
+	fmt.Println("索   引：", index)
+	fmt.Println("索引数组：", mh.Index)
+	fmt.Println("元   素：", mh.Heap)
 
 	len := mh.Len
+	fmt.Print("排序：")
 	for i := 1; i < len; i++ {
 		fmt.Print(mh.GetMax(), " ")
 	}
-	//mh.PrintHeap()
 }
