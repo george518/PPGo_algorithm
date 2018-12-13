@@ -73,20 +73,20 @@ func main() {
 func Test_addTwoNumbers() {
 	listNode1 := new(ListNode)
 	listNode1.Val = 9
-	listNode1.Next = new(ListNode)
-	listNode1.Next.Val = 9
-	listNode1.Next.Next = new(ListNode)
-	listNode1.Next.Next.Val = 9
+	//listNode1.Next = new(ListNode)
+	//listNode1.Next.Val = 9
+	//listNode1.Next.Next = new(ListNode)
+	//listNode1.Next.Next.Val = 9
 
 	listNode1.PrintLn()
 	fmt.Println()
 
 	listNode2 := new(ListNode)
 	listNode2.Val = 9
-	listNode2.Next = new(ListNode)
-	listNode2.Next.Val = 8
-	listNode2.Next.Next = new(ListNode)
-	listNode2.Next.Next.Val = 4
+	//listNode2.Next = new(ListNode)
+	//listNode2.Next.Val = 8
+	//listNode2.Next.Next = new(ListNode)
+	//listNode2.Next.Next.Val = 4
 
 	listNode2.PrintLn()
 	fmt.Println()
