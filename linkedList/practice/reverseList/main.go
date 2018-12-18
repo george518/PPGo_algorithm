@@ -62,7 +62,6 @@ func reverseList2(head *ListNode) *ListNode {
 	}
 
 	var preNode, nextNode *ListNode
-	nextNode = new(ListNode)
 	nextNode = nil
 	preNode = nil
 
